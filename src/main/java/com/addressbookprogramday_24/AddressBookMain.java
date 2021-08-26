@@ -54,21 +54,28 @@ public class AddressBookMain{
             option = sc.next().charAt(0);
             sc.nextLine();
         }while(option == 'Y');
-
+        
+        operate.sortByName();
+        
+        System.out.print("\nDo you want to sort by person's name ? press Y / N : ");
+        char sortOption = sc.next().charAt(0);
+        if(sortOption == 'Y'){
+        	operate.sortByName();
+        }
+       
         System.out.print("\nDo you want to search a person ? press Y / N : ");
         char searchOption = sc.next().charAt(0);
         if(searchOption == 'Y'){
             operate.searchPerson();
         }
-        
+       
         System.out.print("\nDo you want to edit? press Y / N : ");
         char editOption = sc.next().charAt(0);
         if(editOption == 'Y'){
             operate.editContact();
             operate.showContact();
         }
-        
-    
+       
         System.out.print("\nDo you want to delete? press Y / N : ");
         char deleteOption = sc.next().charAt(0);
         if(deleteOption == 'Y'){

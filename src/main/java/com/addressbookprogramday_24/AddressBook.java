@@ -1,6 +1,6 @@
 package com.addressbookprogramday_24;
 
-public class AddressBook extends ContactDetails{
+public class AddressBook extends ContactDetails implements Comparable<AddressBook>{
 
     String address, city, state;
     int zip;
@@ -35,6 +35,10 @@ public class AddressBook extends ContactDetails{
     }
     public int getZip(){
         return zip;
+    }
+    @Override
+    public int compareTo(AddressBook contact) {
+        return (int)(this.firstName.compareTo(contact.getFirstName()));
     }
 }
 

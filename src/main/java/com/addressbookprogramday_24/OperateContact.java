@@ -90,4 +90,26 @@ public class OperateContact{
          
          System.out.println(String.join(",", person));  
     }
+    public void sortByName() {
+    	
+    	List<AddressBook> person = contactMap.entrySet()
+    			.stream()
+    			.sorted(HashMap.Entry.comparingByValue())
+    			.map(HashMap -> HashMap.getValue())
+		        .collect(Collectors.toList());
+    	
+    	
+    	for (AddressBook contact : person)
+    	{
+            System.out.print("\n-----------------");
+            System.out.print("\nFirst Name  : " +  contact.getFirstName());
+            System.out.print("\nLast Name   : " +  contact.getLastName());
+            System.out.print("\nAddress     : " +  contact.getAddress());
+            System.out.print("\nCity        : " +  contact.getCity());
+            System.out.print("\nState       : " +  contact.getState());
+            System.out.print("\nPone Number : " +  contact.getPhoneNo());
+            System.out.print("\nE-mail      : " +  contact.getEmail());
+            System.out.print("\nZip         : " +  contact.getZip());
+        } 
+    }
 }
