@@ -98,7 +98,6 @@ public class OperateContact{
     			.map(HashMap -> HashMap.getValue())
 		        .collect(Collectors.toList());
     	
-    	
     	for (AddressBook contact : person)
     	{
             System.out.print("\n-----------------");

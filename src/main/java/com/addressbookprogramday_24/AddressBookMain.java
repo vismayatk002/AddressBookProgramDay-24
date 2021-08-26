@@ -39,7 +39,7 @@ public class AddressBookMain{
             System.out.print("\nEnter State  : ");  
             state = sc.nextLine();
             contact.setState(state);
-
+            
             System.out.print("\nEnter Phone Number  : ");   
             phoneNo = sc.nextLong();
             contact.setPhoneNo(phoneNo);
@@ -55,9 +55,7 @@ public class AddressBookMain{
             sc.nextLine();
         }while(option == 'Y');
         
-        operate.sortByName();
-        
-        System.out.print("\nDo you want to sort by person's name ? press Y / N : ");
+        System.out.print("\nDo you want to sort by person's city ? press Y / N : ");
         char sortOption = sc.next().charAt(0);
         if(sortOption == 'Y'){
         	operate.sortByName();
@@ -82,8 +80,6 @@ public class AddressBookMain{
             operate.deleteContact();
             operate.showContact();
         }
-        
-
         sc.close();
     }
 }

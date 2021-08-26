@@ -38,7 +38,7 @@ public class AddressBook extends ContactDetails implements Comparable<AddressBoo
     }
     @Override
     public int compareTo(AddressBook contact) {
-        return (int)(this.firstName.compareTo(contact.getFirstName()));
+        return (int)(this.city.compareTo(contact.getCity()));
     }
 }
 
